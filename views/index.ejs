@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <form action="" method="post">
+            <input type="text" name="message" id="" placeholder="enter the message">
+        </form>
+        <% if (videoName != null) { %>
+            <video controls>
+                <source src="/videos/<%= videoName %> " type="video/mp4">
+                NO SUPPORT
+            </video>
+        <% } %>
+        <img src="/images/img.jpeg" alt="Some img" />
+
+        <script>
+            async function name()
+            {
+                let res = await fetch("/", {
+                    method: 'GET'
+                });
+                const data = await res.json();
+                console.log(data.jo_bolta_hai);
+            }
+            name();
+        </script>
+
+    </body>
+</html>
